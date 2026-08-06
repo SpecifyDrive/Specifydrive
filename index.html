@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpecifyDrive - Fuel Cost Calculator India</title>
+
+    <meta name="description" content="Calculate Petrol, Diesel and CNG fuel cost instantly with SpecifyDrive Fuel Cost Calculator.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🚗 <span>SpecifyDrive</span>
+    </div>
+
+    <nav>
+
+        <a href="#">Home</a>
+
+        <a href="#calculator">Fuel Calculator</a>
+
+        <a href="#news">Car News</a>
+
+        <a href="#youtube">YouTube</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</header>
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>India's Smart Fuel Cost Calculator</h1>
+
+        <p>
+
+            Calculate Petrol, Diesel & CNG fuel expenses in seconds.
+
+        </p>
+
+        <a href="#calculator" class="btn">
+
+            Calculate Fuel Cost
+
+        </a>
+
+    </div>
+
+</section>
+<section id="news">
+
+<h2>Latest Car News</h2>
+
+<div class="tools">
+
+<div class="tool">
+
+🚙
+
+<h3>New Car Launches</h3>
+
+<p>Latest launches with price & features.</p>
+
+</div>
+
+<div class="tool">
+
+⚡
+
+<h3>EV News</h3>
+
+<p>Electric vehicle updates.</p>
+
+</div>
+
+<div class="tool">
+
+🔥
+
+<h3>Trending Cars</h3>
+
+<p>Most searched cars in India.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="calculator" class="calculator">
+
+<h2>Fuel Cost Calculator</h2>
+
+<div class="card">
+
+<label>Fuel Type</label>
+
+<select id="fuelType">
+
+<option>Petrol</option>
+<option>Diesel</option>
+<option>CNG</option>
+
+</select>
+
+<label>Fuel Price (₹)</label>
+
+<input
+type="number"
+id="fuelPrice"
+placeholder="Enter fuel price">
+
+<label>Vehicle Mileage (km/l)</label>
+
+<input
+type="number"
+id="mileage"
+placeholder="Mileage">
+
+<label>Distance (km)</label>
+
+<input
+type="number"
+id="distance"
+placeholder="Distance">
+
+<button onclick="calculateFuel()">
+
+Calculate Cost
+
+</button>
+
+<div id="result">
+
+<h3>Total Cost</h3>
+
+<p>₹0</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="tools">
+
+<h2>More Tools</h2>
+
+<div class="tools">
+
+<div class="tool">
+
+🚘
+
+<h3>Mileage Calculator</h3>
+
+<p>Know your vehicle mileage instantly.</p>
+
+</div>
+
+<div class="tool">
+
+🛣️
+
+<h3>Trip Cost</h3>
+
+<p>Estimate your journey expenses.</p>
+
+</div>
+
+<div class="tool">
+
+📅
+
+<h3>Monthly Expense</h3>
+
+<p>Track monthly fuel spending.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="youtube">
+
+<h2>Latest Videos</h2>
+
+<p>
+
+Subscribe to
+
+<strong>SpecifyDrive</strong>
+
+for latest car updates.
+
+</p>
+
+<a href="https://youtube.com/@SpecifyDrive" target="_blank" class="btn">
+Visit Channel
+</a>
+
+</section>
+
+<footer id="contact">
+
+<h2>SpecifyDrive</h2>
+
+<p>
+
+Fuel Calculator • Car News • Reviews • Comparisons
+
+</p>
+
+<br>
+
+<p>
+
+Made with ❤️ by SpecifyDrive
+
+</p>
+
+</footer>
+<script src="script.js"></script>
+
+</body>
+
+</html>
