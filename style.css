@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 html {
@@ -10,383 +9,376 @@ html {
 }
 
 body {
+    font-family: Arial, sans-serif;
     background: #0d1117;
     color: #ffffff;
+    line-height: 1.6;
 }
 
-
 /* HEADER */
-
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
+    background: #050505;
+    min-height: 70px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
-    padding: 18px 7%;
-
-    background: rgba(0, 0, 0, 0.85);
-
-    backdrop-filter: blur(12px);
-
+    justify-content: space-between;
+    padding: 0 7%;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: bold;
-    color: #ffd700;
+    color: #ffd400;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.logo a {
+    color: #ffd400;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    margin-left: 22px;
     font-size: 15px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #ffd700;
+    color: #ffd400;
 }
-
 
 /* HERO */
-
 .hero {
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     text-align: center;
-
-    padding: 120px 20px 80px;
-
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.75),
-            rgba(0,0,0,0.85)
-        ),
-        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80");
-
-    background-size: cover;
-    background-position: center;
-}
-
-.hero-content {
-    max-width: 800px;
-}
-
-.badge {
-    display: inline-block;
-
-    padding: 8px 16px;
-
-    border: 1px solid #ffd700;
-
-    border-radius: 30px;
-
-    color: #ffd700;
-
-    margin-bottom: 20px;
-
-    font-size: 13px;
+    padding: 70px 20px 50px;
+    background: linear-gradient(180deg, #11161d, #0d1117);
 }
 
 .hero h1 {
-    font-size: 58px;
-    color: #ffd700;
-    margin-bottom: 20px;
+    font-size: 46px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #ffd400;
 }
 
 .hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #dddddd;
+    color: #b8bec8;
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
 }
 
-
-/* BUTTON */
-
-.btn {
-    display: inline-block;
-
-    padding: 14px 30px;
-
-    background: #ffd700;
-
-    color: #000;
-
-    border-radius: 30px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: 0.3s;
+/* MAIN */
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
 }
-
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-
-/* SECTIONS */
 
 section {
-    padding: 90px 8%;
+    margin: 35px auto;
 }
 
-h2 {
-    text-align: center;
-
-    color: #ffd700;
-
-    font-size: 38px;
-
-    margin-bottom: 12px;
+/* CARDS */
+.card {
+    background: #151a21;
+    border: 1px solid #252b34;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
-.section-subtitle {
-    text-align: center;
-
-    color: #aaaaaa;
-
-    max-width: 700px;
-
-    margin: 0 auto 35px;
-
-    line-height: 1.6;
-}
-
-
-/* CALCULATOR */
-
-.calculator-card {
-    max-width: 520px;
-
-    margin: auto;
-
-    padding: 35px;
-
-    background: #161b22;
-
-    border: 1px solid #30363d;
-
-    border-radius: 20px;
-
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-}
-
-.calculator-card label {
-    display: block;
-
-    margin-top: 16px;
-
-    margin-bottom: 7px;
-
-    font-weight: bold;
-}
-
-.calculator-card input,
-.calculator-card select {
-
-    width: 100%;
-
-    padding: 14px;
-
-    border: 1px solid #30363d;
-
-    border-radius: 10px;
-
-    background: #21262d;
-
-    color: white;
-
-    outline: none;
-
-    font-size: 15px;
-}
-
-.calculator-card input:focus,
-.calculator-card select:focus {
-    border-color: #ffd700;
-}
-
-.calculator-card button {
-
-    width: 100%;
-
-    margin-top: 25px;
-
-    padding: 15px;
-
-    border: none;
-
-    border-radius: 10px;
-
-    background: #ffd700;
-
-    color: #000;
-
-    font-size: 17px;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.calculator-card button:hover {
-    transform: translateY(-2px);
-}
-
-
-/* RESULT */
-
-#result,
-#carResult {
-
-    margin-top: 25px;
-
-    padding: 20px;
-
-    background: #0d1117;
-
-    border-radius: 15px;
-
-    line-height: 1.8;
-}
-
-#result h3,
-#carResult h3 {
-    color: #ffd700;
-
+.card h2 {
+    color: #ffd400;
     margin-bottom: 10px;
 }
 
+.card p {
+    color: #b8bec8;
+    margin-bottom: 20px;
+}
 
-/* CAR RESULTS */
+/* CALCULATOR */
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    color: #ffffff;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px 14px;
+    background: #0d1117;
+    color: #ffffff;
+    border: 1px solid #3a414c;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    border-color: #ffd400;
+    box-shadow: 0 0 0 2px rgba(255,212,0,0.12);
+}
+
+/* BUTTON */
+button,
+.btn {
+    border: none;
+    background: #ffd400;
+    color: #080808;
+    padding: 14px 24px;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover,
+.btn:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* CALCULATOR BUTTON AREA */
+.button-area {
+    margin-top: 20px;
+}
+
+/* RESULT */
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background: #0b0f14;
+    border-left: 4px solid #ffd400;
+    border-radius: 8px;
+}
+
+.result h3 {
+    color: #ffd400;
+    margin-bottom: 10px;
+}
+
+.result p {
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+/* SALARY CAR SECTION */
+.salary-box {
+    background: #151a21;
+    border: 1px solid #252b34;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.salary-box h2 {
+    color: #ffd400;
+    margin-bottom: 8px;
+}
+
+.salary-box .subtitle {
+    color: #b8bec8;
+    margin-bottom: 25px;
+}
+
+.salary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.salary-actions {
+    margin-top: 22px;
+}
+
+/* BUDGET RESULT */
+.budget-result {
+    margin-top: 30px;
+    padding: 25px;
+    background: #0b0f14;
+    border-radius: 12px;
+    border: 1px solid #303640;
+}
+
+.budget-result h3 {
+    color: #ffd400;
+    margin-bottom: 15px;
+}
+
+.budget-result .budget-number {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 8px 0;
+}
+
+/* CAR RECOMMENDATIONS */
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
 
 .car-card {
-
-    background: #161b22;
-
-    border: 1px solid #30363d;
-
-    border-radius: 15px;
-
+    background: #151a21;
+    border: 1px solid #303640;
+    border-radius: 12px;
     padding: 18px;
+    transition: 0.25s;
+}
 
-    margin-top: 15px;
+.car-card:hover {
+    border-color: #ffd400;
+    transform: translateY(-4px);
 }
 
 .car-card h4 {
-    color: #ffd700;
-
-    font-size: 20px;
-
+    color: #ffffff;
+    font-size: 18px;
     margin-bottom: 8px;
 }
 
 .car-card p {
-    color: #cccccc;
-
+    color: #b8bec8;
     font-size: 14px;
-
     margin: 4px 0;
 }
 
-.car-badge {
-
-    display: inline-block;
-
-    margin-top: 8px;
-
-    padding: 5px 10px;
-
-    border-radius: 20px;
-
-    background: #ffd700;
-
-    color: #000;
-
-    font-size: 12px;
-
-    font-weight: bold;
+.car-price {
+    color: #ffd400 !important;
+    font-weight: 700;
 }
 
-
-/* FOOTER */
-
-footer {
-
-    text-align: center;
-
-    padding: 50px 20px;
-
-    background: #000;
-}
-
-footer h2 {
-    margin-bottom: 10px;
-}
-
-footer p {
-    color: #aaaaaa;
-}
-
-.copyright {
+/* NOTICE */
+.notice {
     margin-top: 20px;
-
+    color: #9da5b1;
     font-size: 13px;
 }
 
+/* FOOTER */
+footer {
+    margin-top: 60px;
+    background: #050505;
+    border-top: 1px solid #222;
+    text-align: center;
+    padding: 30px 20px;
+    color: #8f98a5;
+}
+
+footer strong {
+    color: #ffd400;
+}
+
+/* LINKS */
+a {
+    color: #ffd400;
+}
+
+a:hover {
+    color: #ffffff;
+}
 
 /* MOBILE */
-
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
     header {
         padding: 15px 5%;
-
         flex-direction: column;
+        gap: 12px;
     }
 
     nav {
-        margin-top: 12px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    nav a {
-        margin: 0 7px;
-
-        font-size: 12px;
+    .hero {
+        padding: 50px 15px 35px;
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: 32px;
     }
 
     .hero p {
         font-size: 16px;
     }
 
-    h2 {
-        font-size: 30px;
+    main {
+        width: 94%;
     }
 
-    section {
-        padding: 70px 5%;
+    .calculator-grid,
+    .salary-grid {
+        grid-template-columns: 1fr;
     }
 
-    .calculator-card {
-        padding: 25px 20px;
+    .car-list {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .salary-box {
+        padding: 20px;
+    }
+
+    button,
+    .btn {
+        width: 100%;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .card,
+    .salary-box {
+        border-radius: 12px;
     }
 }
