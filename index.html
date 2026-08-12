@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <title>SpecifyDrive | Fuel Cost & Car Affordability Calculator</title>
 
     <meta name="description"
-          content="Calculate Petrol, Diesel and CNG fuel costs and find cars that fit your salary and budget with SpecifyDrive.">
+        content="Calculate Petrol, Diesel and CNG fuel costs and find cars that fit your salary and budget with SpecifyDrive.">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -53,7 +54,7 @@
 
 <!-- FUEL CALCULATOR -->
 
-<section id="calculator">
+<section id="calculator" class="section">
 
     <h2>⛽ Fuel Cost Calculator</h2>
 
@@ -63,48 +64,64 @@
 
     <div class="calculator-card">
 
-        <label for="fuelType">Fuel Type</label>
+        <div class="form-grid">
 
-        <select id="fuelType">
-            <option value="Petrol">Petrol</option>
-            <option value="Diesel">Diesel</option>
-            <option value="CNG">CNG</option>
-        </select>
+            <div class="form-group">
+                <label for="fuelType">Fuel Type</label>
+
+                <select id="fuelType">
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="CNG">CNG</option>
+                </select>
+            </div>
 
 
-        <label for="fuelPrice">Fuel Price (₹/L or kg)</label>
+            <div class="form-group">
+                <label for="fuelPrice">Fuel Price (₹/L or kg)</label>
 
-        <input
-            type="number"
-            id="fuelPrice"
-            placeholder="Enter fuel price"
-            value="95"
+                <input
+                    type="number"
+                    id="fuelPrice"
+                    placeholder="Enter fuel price"
+                    value="95"
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="mileage">Mileage (km/L)</label>
+
+                <input
+                    type="number"
+                    id="mileage"
+                    placeholder="Example: 18"
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="distance">Distance (km)</label>
+
+                <input
+                    type="number"
+                    id="distance"
+                    placeholder="Example: 500"
+                >
+            </div>
+
+        </div>
+
+
+        <button
+            class="calculate-btn"
+            onclick="calculateFuel()"
         >
-
-
-        <label for="mileage">Mileage (km/L)</label>
-
-        <input
-            type="number"
-            id="mileage"
-            placeholder="Example: 18"
-        >
-
-
-        <label for="distance">Distance (km)</label>
-
-        <input
-            type="number"
-            id="distance"
-            placeholder="Example: 500"
-        >
-
-
-        <button onclick="calculateFuel()">
             Calculate Fuel Cost
         </button>
 
-        <div id="result"></div>
+
+        <div id="result" class="result"></div>
 
     </div>
 
@@ -113,7 +130,7 @@
 
 <!-- SALARY CAR CALCULATOR -->
 
-<section id="salary-car">
+<section id="salary-car" class="section">
 
     <h2>🚗 Meri Salary, Meri Car</h2>
 
@@ -125,76 +142,104 @@
 
     <div class="calculator-card">
 
-        <label for="salary">
-            Monthly Salary (₹)
-        </label>
+        <div class="salary-grid">
 
-        <input
-            type="number"
-            id="salary"
-            placeholder="Example: 50000"
+            <div class="form-group">
+
+                <label for="salary">
+                    Monthly Salary (₹)
+                </label>
+
+                <input
+                    type="number"
+                    id="salary"
+                    placeholder="Example: 50000"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="downPayment">
+                    Down Payment Budget (₹)
+                </label>
+
+                <input
+                    type="number"
+                    id="downPayment"
+                    placeholder="Example: 200000"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="loanTenure">
+                    Loan Tenure
+                </label>
+
+                <select id="loanTenure">
+
+                    <option value="3">3 Years</option>
+                    <option value="5" selected>5 Years</option>
+                    <option value="7">7 Years</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="preferredFuel">
+                    Preferred Fuel
+                </label>
+
+                <select id="preferredFuel">
+
+                    <option value="Any">Any Fuel</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="CNG">CNG</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="EV">Electric</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="priority">
+                    Your Priority
+                </label>
+
+                <select id="priority">
+
+                    <option value="Overall">Overall Best</option>
+                    <option value="Mileage">Mileage</option>
+                    <option value="Safety">Safety</option>
+                    <option value="Performance">Performance</option>
+                    <option value="Features">Features</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="calculate-btn"
+            onclick="findMyCar()"
         >
-
-
-        <label for="downPayment">
-            Down Payment Budget (₹)
-        </label>
-
-        <input
-            type="number"
-            id="downPayment"
-            placeholder="Example: 200000"
-        >
-
-
-        <label for="loanTenure">
-            Loan Tenure
-        </label>
-
-        <select id="loanTenure">
-
-            <option value="3">3 Years</option>
-            <option value="5" selected>5 Years</option>
-            <option value="7">7 Years</option>
-
-        </select>
-
-
-        <label for="preferredFuel">
-            Preferred Fuel
-        </label>
-
-        <select id="preferredFuel">
-
-            <option value="Any">Any Fuel</option>
-            <option value="Petrol">Petrol</option>
-            <option value="CNG">CNG</option>
-            <option value="Diesel">Diesel</option>
-            <option value="EV">Electric</option>
-
-        </select>
-
-
-        <label for="priority">
-            Your Priority
-        </label>
-
-        <select id="priority">
-
-            <option value="Overall">Overall Best</option>
-            <option value="Mileage">Mileage</option>
-            <option value="Safety">Safety</option>
-            <option value="Performance">Performance</option>
-            <option value="Features">Features</option>
-
-        </select>
-
-
-        <button onclick="findMyCar()">
             🔍 Find My Car
         </button>
 
-        <div id="carResult"></div>
+
+        <div id="carResult" class="result"></div>
 
     </div>
 
@@ -203,7 +248,7 @@
 
 <!-- YOUTUBE -->
 
-<section id="youtube">
+<section id="youtube" class="section">
 
     <h2>📺 Follow SpecifyDrive</h2>
 
@@ -240,4 +285,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
