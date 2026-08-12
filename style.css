@@ -16,23 +16,26 @@ body {
 
 /* HEADER */
 header {
-    background: #050505;
     height: 70px;
+    background: #050505;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    color: #ffd400;
     font-size: 28px;
     font-weight: bold;
+    color: #ffd400;
 }
 
 nav {
     display: flex;
-    gap: 28px;
+    gap: 30px;
 }
 
 nav a {
@@ -45,203 +48,208 @@ nav a:hover {
     color: #ffd400;
 }
 
-/* MAIN */
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 30px 20px;
-}
-
 /* HERO */
 .hero {
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 35px 10px;
+    padding: 50px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.badge {
+    font-size: 15px;
+    color: white;
 }
 
 .hero h1 {
-    font-size: 40px;
-    margin-bottom: 12px;
+    font-size: 42px;
+    margin: 15px 0;
 }
 
 .hero p {
-    color: #b8c0cc;
-    margin-bottom: 20px;
+    color: #d0d0d0;
+    font-size: 17px;
+    margin-bottom: 25px;
 }
 
-/* SECTIONS */
-.section {
-    margin-top: 35px;
-}
-
-.section h2 {
-    color: #ffd400;
-    font-size: 27px;
-    margin-bottom: 8px;
-}
-
-.section-description {
-    color: #b8c0cc;
-    margin-bottom: 18px;
-}
-
-/* CALCULATOR */
-.calculator-card {
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 14px;
-    padding: 25px;
-    width: 100%;
-}
-
-/* IMPORTANT: HORIZONTAL FIELDS */
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    align-items: end;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    font-size: 14px;
+.btn {
+    display: inline-block;
+    background: #ffd000;
+    color: #111;
+    padding: 14px 28px;
+    border-radius: 10px;
     font-weight: bold;
-    margin-bottom: 7px;
+    text-decoration: none;
 }
 
-input,
-select {
+/* ALL SECTIONS */
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #ffd000;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #d0d0d0;
+    margin-bottom: 30px;
+}
+
+/* CALCULATOR CARD */
+.calculator-card {
+    width: 520px;
+    max-width: 100%;
+    margin: 30px auto 0;
+    background: #171c22;
+    border: 1px solid #303740;
+    border-radius: 18px;
+    padding: 30px;
+    text-align: left;
+}
+
+/* LABELS */
+.calculator-card label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 18px;
+}
+
+.calculator-card label:first-child {
+    margin-top: 0;
+}
+
+/* INPUTS */
+.calculator-card input,
+.calculator-card select {
     width: 100%;
-    height: 45px;
-    padding: 10px 12px;
-    background: #21262d;
+    padding: 14px;
+    background: #222830;
     color: white;
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    font-size: 14px;
+    border: 1px solid #353d46;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
 }
 
-input:focus,
-select:focus {
-    outline: none;
-    border-color: #ffd400;
+.calculator-card input:focus,
+.calculator-card select:focus {
+    border-color: #ffd000;
 }
 
 /* BUTTON */
-.calculate-btn {
+.calculator-card button {
     width: 100%;
-    height: 45px;
-    margin-top: 18px;
+    margin-top: 25px;
+    padding: 15px;
     border: none;
-    border-radius: 9px;
-    background: #ffd400;
+    border-radius: 10px;
+    background: #ffd000;
     color: #111;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
 }
 
-.calculate-btn:hover {
-    background: #ffdf33;
+.calculator-card button:hover {
+    background: #ffdf3d;
 }
 
-/* RESULT */
-.result {
-    margin-top: 18px;
+/* RESULTS */
+#result,
+#carResult {
+    margin-top: 25px;
     padding: 18px;
-    background: #0d1117;
-    border-radius: 10px;
-    border: 1px solid #30363d;
-}
-
-.result h3 {
-    color: #ffd400;
-    margin-bottom: 10px;
-}
-
-/* SALARY CAR CALCULATOR */
-.salary-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    align-items: end;
-}
-
-/* CAR RESULTS */
-.car-results {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
-
-.car-card {
-    background: #161b22;
-    border: 1px solid #30363d;
+    background: #0b0f14;
     border-radius: 12px;
-    padding: 18px;
+    border: 1px solid #303740;
+    line-height: 1.7;
 }
 
-.car-card h3 {
-    color: #ffd400;
-    margin-bottom: 8px;
+/* SALARY CAR SECTION */
+#salary-car {
+    padding-top: 80px;
 }
 
-.car-card p {
-    color: #ccc;
-    margin: 5px 0;
+#salary-car .calculator-card {
+    width: 600px;
+}
+
+/* YOUTUBE */
+#youtube {
+    text-align: center;
+}
+
+#youtube .btn {
+    margin-top: 10px;
 }
 
 /* FOOTER */
 footer {
-    margin-top: 40px;
-    padding: 25px;
     text-align: center;
+    padding: 50px 20px;
     background: #050505;
-    color: #888;
+}
+
+footer h2 {
+    color: #ffd000;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 13px;
 }
 
 /* MOBILE */
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 
     header {
-        height: auto;
-        padding: 18px;
-        flex-direction: column;
-        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 22px;
     }
 
     nav {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 12px;
     }
 
-    main {
-        padding: 20px 12px;
+    nav a {
+        font-size: 12px;
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 32px;
     }
 
-    .form-grid,
-    .salary-grid {
-        grid-template-columns: 1fr 1fr;
+    section {
+        padding: 45px 15px;
     }
 
-    .car-results {
-        grid-template-columns: 1fr;
+    section h2 {
+        font-size: 26px;
     }
-}
 
-@media (max-width: 500px) {
-
-    .form-grid,
-    .salary-grid {
-        grid-template-columns: 1fr;
+    .calculator-card {
+        width: 100%;
+        padding: 22px;
     }
 }
